@@ -86,7 +86,7 @@ pip install hummingbird-ml pyyaml networkx tqdm
 # Build OpenPARF
 git clone --recursive https://github.com/PKU-IDEA/OpenPARF.git
 mkdir build && cd build
-cmake .. -DCMAKE_PREFIX_PATH=$CONDA_PREFIX -DPYTHON_EXECUTABLE=$(which python) -DCMAKE_INSTALL_PREFIX=../install
+cmake .. -DCMAKE_PREFIX_PATH=$CONDA_PREFIX -DPYTHON_EXECUTABLE=$(which python) -DCMAKE_INSTALL_PREFIX=../install -DPython3_EXECUTABLE=$(which python)
 make -j8 && make install
 ```
 
